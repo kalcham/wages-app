@@ -9,7 +9,6 @@ namespace wages_app
         //global variables
         static string topEarner = "";
         static int topEarnerhours = 9;
-
         //methods and/or functions
 
 
@@ -89,7 +88,7 @@ namespace wages_app
                 $"Tax Rate {tax}\n" +
                 $"Tax:{Math.Round(wages * tax, 2)}\n" +
                 $"Final Pay: {finalPay}\n\n\n");
-
+                
         }
 
         static void OneEmployee()
@@ -134,13 +133,21 @@ namespace wages_app
         //when run or main process
         static void Main(string[] args)
         {
+            Console.WriteLine(
+        @" ____ ____ ____ ____ ____ ____ ____ "+"\n" +
+        @"||w |||a |||g |||e |||a |||p |||p ||"+"\n" +
+        @"||__|||__|||__|||__|||__|||__|||__||"+"\n" +
+        @"|/__\|/__\|/__\|/__\|/__\|/__\|/__\|"+"\n");
+
+            
             string flagmain = "";
             while(!flagmain.Equals("XXX"))
             {
                 OneEmployee();
 
-
                 flagmain = CheckFlag();
+
+                Console.Clear();
             }
 
             Console.WriteLine($"{topEarner} the most hours worked: {topEarnerhours}hrs");
